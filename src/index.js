@@ -32,6 +32,27 @@ function DiaryList() {
 						<Home />
 					</Route>
 
+					<Route exact path="/view">
+						<table>
+							<thead></thead>
+							<tbody>
+								<tr>
+									<td>
+										{" "}
+										<NewEventsForm addDiaryEvents={addDiaryEvents} />{" "}
+									</td>
+									<td>
+										{list.map((data, index) => {
+											return (
+												<Diary key={index} {...data} deleteInfo={deleteInfo} />
+											);
+										})}
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</Route>
+
 					<Route exact path="/about">
 						<About />
 					</Route>
