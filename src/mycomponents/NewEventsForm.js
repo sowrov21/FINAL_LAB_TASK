@@ -71,12 +71,15 @@ export default function NewEventsForm({ addDiaryEvents }) {
 						<tr>
 							<td>Details</td>
 							<td>
-								<input
+								<textarea name="details" onChange={changeEvents}>
+								{newEvents.details}
+								</textarea>
+								{/*<input
 									type="text"
 									name="details"
 									value={newEvents.details}
 									onChange={changeEvents}
-								/>
+								/>*/}
 							</td>
 						</tr>
 						<tr>

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 const Navbar = () => {
 	return (
-		<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-			<a class="navbar-brand" to="#">
+		<nav className="navbar navbar-expand-lg navbar-light bg-primary">
+			<a className="navbar-brand" exact to="#">
 				Diary App
 			</a>
 			<button
-				class="navbar-toggler"
+				className="navbar-toggler"
 				type="button"
 				data-toggle="collapse"
 				data-target="#navbarSupportedContent"
@@ -14,24 +14,29 @@ const Navbar = () => {
 				aria-expanded="false"
 				aria-label="Toggle navigation"
 			>
-				<span class="navbar-toggler-icon"></span>
+				<span className="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<Link class="nav-link" to="/">
-							Home <span class="sr-only">(current)</span>
+			<div className="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul className="navbar-nav mr-auto">
+					<li className="nav-item active">
+						<Link className="nav-link" exact to="/">
+							Home <span className="sr-only">(current)</span>
 						</Link>
 					</li>
-					<li class="nav-item">
-						<Link class="nav-link" to="/view">
+					<li className="nav-item">
+						<Link className="nav-link" exact to="/add">
+							Add New
+						</Link>
+					</li>
+					<li className="nav-item">
+						<Link className="nav-link" exact to="/view">
 							View
 						</Link>
 					</li>
 
-					<li class="nav-item">
-						<Link class="nav-link " to="/about">
+					<li className="nav-item">
+						<Link className="nav-link " exact to="/about">
 							About
 						</Link>
 					</li>

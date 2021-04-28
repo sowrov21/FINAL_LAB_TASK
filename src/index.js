@@ -8,6 +8,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import Home from "./mycomponents/Pages/Home";
 import About from "./mycomponents/Pages/About";
 import Navbar from "./mycomponents/Layouts/Navbar";
+import DataTable from "./mycomponents/Pages/AllDataTable";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -32,7 +33,7 @@ function DiaryList() {
 						<Home />
 					</Route>
 
-					<Route exact path="/view">
+					<Route exact path="/add">
 						<table>
 							<thead></thead>
 							<tbody>
@@ -51,6 +52,10 @@ function DiaryList() {
 								</tr>
 							</tbody>
 						</table>
+					</Route>
+
+					<Route exact path="/view">
+						<DataTable />
 					</Route>
 
 					<Route exact path="/about">
